@@ -40,6 +40,61 @@
         button, [role="button"], a.btn { min-height: 44px; }
       }
     </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://parental-leave.enjoy-onepage.com/#webapp",
+          "name": "2026 부부 육아휴직 급여 & 건보료 감면 시뮬레이터",
+          "url": "https://parental-leave.enjoy-onepage.com/",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript. Requires HTML5.",
+          "description": "2026년 개편된 계단식 육아휴직 급여 상한액, 사후지급금 폐지, 6+6 부모특례 및 복직 시 건보료 60% 감면을 모의 계산합니다.",
+          "image": "https://parental-leave.enjoy-onepage.com/og-image.png",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://parental-leave.enjoy-onepage.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "2026년 육아휴직 급여 상한액은 어떻게 바뀌었나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "1~3개월차는 월 최대 250만 원, 4~6개월차는 월 최대 200만 원, 7~12개월차는 월 최대 160만 원으로 계단식 상향되었습니다. 사후지급금(25%) 제도는 폐지되어 100% 매월 즉시 지급됩니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "6+6 부모육아휴직제 특례는 언제 적용되나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "자녀 생후 18개월 이내에 부모가 순차 또는 동시에 육아휴직을 사용할 때 첫 6개월간 통상임금 100% 범위 내에서 최대 월 450만 원까지 상한액이 차등 지급됩니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "휴직 기간 중 건강보험료는 얼마나 감면되나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "국민건강보험법 제75조에 따라 직장건강보험료의 60%가 감면되며, 하한액(월 10,080원) 기준으로 복직 시점까지 고지가 유예되었다가 일괄 정산됩니다."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
     <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
@@ -244,18 +299,45 @@
         </section>
     </main>
 
+    <!-- 🔗 딥리서치 토픽 클러스터: 관련 전문 블로그 가이드 역링크 -->
+    <section class="max-w-5xl mx-auto my-6 px-4">
+      <div class="p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200/80 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl flex-shrink-0">📜</span>
+          <div class="text-left">
+            <div class="text-[11px] font-bold text-blue-600 uppercase tracking-wider">공식 심층 리포트 연계</div>
+            <div class="text-xs sm:text-sm font-bold text-slate-800 leading-snug">2026 육아휴직 사후지급금 폐지 및 부부 합산 6+6 특례 급여 총정리</div>
+          </div>
+        </div>
+        <a href="https://life-kr.enjoy-onepage.com/2026/09/18/gov24-printer-pdf-error-fix/" target="_blank" rel="noopener noreferrer" class="shrink-0 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl transition shadow-sm hover:shadow flex items-center gap-1.5">
+          <span>전문 분석 보기</span>
+          <span>→</span>
+        </a>
+      </div>
+    </section>
+
+
     <!-- Bottom Large Ad Banner -->
     <div class="manual-ad-box ad-bottom-banner" style="width: 100%; max-width: 960px; margin: 24px auto 16px; text-align: center;">
         <ins class="adsbygoogle" data-ad-client="ca-pub-2228289204702106" data-ad-format="auto" data-ad-slot="3416334507" data-full-width-responsive="true" style="display:block;"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
-        <div class="max-w-5xl mx-auto px-4">
-            <p class="mb-1">본 계산기는 고용보험법 및 국민건강보험법 관련 법령을 기준으로 작성된 모의 시뮬레이터이며, 실제 수급액은 관할 고용센터 심사에 따라 달라질 수 있습니다.</p>
-            <p>© 2026 부부 육아휴직 시뮬레이터. All rights reserved.</p>
+    
+    <footer class="bg-white border-t border-slate-200 py-8 px-4 text-center text-xs text-slate-500">
+        <div class="max-w-5xl mx-auto space-y-3">
+            <div class="flex flex-wrap justify-center gap-4 text-xs font-medium text-slate-600">
+                <a class="hover:text-indigo-600 transition-colors" href="/about.html">서비스 소개 및 법정 산정식</a>
+                <span>·</span>
+                <a class="hover:text-indigo-600 transition-colors" href="/privacy.html">개인정보처리방침</a>
+                <span>·</span>
+                <a class="hover:text-indigo-600 transition-colors" href="/terms.html">서비스 이용약관</a>
+            </div>
+            <p>본 계산기는 관계 법령 및 공인 고시를 기준으로 작성된 모의 시뮬레이터이며 실제 행정 심사 결과와 상이할 수 있습니다.</p>
+            <p class="text-[11px] text-slate-400">© 2026 2026 부부 육아휴직 급여 & 건보료 감면 시뮬레이터. All rights reserved.</p>
         </div>
     </footer>
+
 
     <script>
         // Formatting & Helpers

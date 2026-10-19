@@ -4,8 +4,8 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <link rel="preconnect" href="https://pagead2.googlesyndication.com">
-    <title>2026 부부 육아휴직 급여 & 건강보험료 감면 계산기 | 6+6 특례 모의계산</title>
-    <meta content="2026년 개편된 계단식 육아휴직 급여 상한액(250만-200만-160만 원), 사후지급금 폐지(100% 즉시지급), 6+6 부모육아휴직제 특례, 복직 시 건강보험료 60% 감면 정산액을 부부 합산으로 즉시 시뮬레이션합니다." name="description"/>
+    <title>2026 부부 육아휴직 급여 & 건강보험료 감면 계산기</title>
+    <meta content="2026년 개편된 계단식 육아휴직 급여 상한액(250만-200만-160만 원), 사후지급금 폐지(100% 즉시지급)," name="description"/>
     <meta content="2026 육아휴직 급여 상한액, 6+6 부모육아휴직제 계산기, 육아휴직 사후지급금 폐지, 육아휴직 건강보험료 유예 감면, 부부 육아휴직 계산기" name="keywords"/>
     <meta content="index, follow" name="robots"/>
     <link href="https://parental-leave.enjoy-onepage.com/" rel="canonical"/>
@@ -13,7 +13,7 @@
     <meta content="ko_KR" property="og:locale"/>
     <meta content="https://parental-leave.enjoy-onepage.com/" property="og:url"/>
     <meta content="2026 부부 육아휴직 급여 & 건보료 계산기" property="og:site_name"/>
-    <meta content="2026 부부 육아휴직 급여 & 건강보험료 감면 계산기 | 6+6 특례 모의계산" property="og:title"/>
+    <meta content="2026 부부 육아휴직 급여 & 건강보험료 감면 계산기" property="og:title"/>
     <meta content="2026년 개편된 계단식 육아휴직 급여 상한액(250만-200만-160만 원), 사후지급금 폐지(100% 즉시지급), 6+6 부모육아휴직제 특례, 복직 시 건보료 정산액을 즉시 계산합니다." property="og:description"/>
     <meta content="https://parental-leave.enjoy-onepage.com/og-image.png" property="og:image"/>
     <meta content="summary_large_image" name="twitter:card"/>
@@ -94,6 +94,25 @@
     }
     </script>
 
+<script id="math-guard">
+// Global Math & DOM Output Guard: prevents NaN / Infinity leaks to UI
+(function() {
+  const origToLocaleString = Number.prototype.toLocaleString;
+  Number.prototype.toLocaleString = function(locales, options) {
+    if (!Number.isFinite(this.valueOf())) return '0';
+    return origToLocaleString.call(this, locales, options);
+  };
+  const origToFixed = Number.prototype.toFixed;
+  Number.prototype.toFixed = function(digits) {
+    if (!Number.isFinite(this.valueOf())) return '0';
+    return origToFixed.call(this, digits);
+  };
+})();
+</script>
+<style id="ad-cls-shield">
+  .ad-bottom { min-height: 280px !important; }
+  .ad-bottom ins { min-height: 280px !important; }
+</style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
     <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
@@ -310,7 +329,14 @@
     </div>
 
   
-    <!-- E-E-A-T FAQ Section (16-5 헌법 준수) -->
+    <!-- ADSENSE START: mid -->
+<div class="ad-box ad-mid" style="max-width:1080px;margin:16px auto;padding:0 14px;text-align:center;">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2228289204702106" data-ad-slot="1186914926" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<!-- ADSENSE END: mid -->
+
+<!-- E-E-A-T FAQ Section (16-5 헌법 준수) -->
     <section class="mt-8 mb-8 space-y-3">
       <h2 class="text-xl font-bold text-gray-900 mb-4">자주 묻는 질문 (FAQ)</h2>
       <details class="bg-gray-50 p-4 rounded-xl border border-gray-200 group">
@@ -363,8 +389,8 @@
 
 
     <!-- Bottom Large Ad Banner -->
-    <div class="manual-ad-box ad-bottom-banner" style="width: 100%; max-width: 960px; margin: 24px auto 16px; text-align: center;">
-        <ins class="adsbygoogle" data-ad-client="ca-pub-2228289204702106" data-ad-format="auto" data-ad-slot="3416334507" data-full-width-responsive="true" style="display:block;"></ins>
+    <div class="manual-ad-box ad-bottom-banner" style="width: 100%; max-width: 960px; margin: 24px auto 16px; text-align: center;min-height:280px;">
+        <ins class="adsbygoogle" data-ad-client="ca-pub-2228289204702106" data-ad-format="auto" data-ad-slot="3416334507" data-full-width-responsive="true" style="display:block;min-height:280px;"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
